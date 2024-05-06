@@ -33,8 +33,8 @@
                                 </a>
                                 <ul class="dropdown-menu">
 
-                                    <li><a class="dropdown-item" href="/views/allproduct.html">All Product</a></li>
-                                    <li><a class="dropdown-item" href="/views/soycandle.html">Soy Candle</a></li>
+                                    <li><a class="dropdown-item" href="../views/allproduct.html">All Product</a></li>
+                                    <li><a class="dropdown-item" href="../views/soycandle.html">Soy Candle</a></li>
                                     <li><a class="dropdown-item" href="#">Purfume</a></li>
                                     <li><a class="dropdown-item" href="#">Bath Bomb</a></li>
                                     <li><a class="dropdown-item" href="#">Diffuser</a></li>
@@ -70,9 +70,96 @@
             </div>
         </div>
     </div>
-
+    <br>
+    <br>
+    <br>
 
     <!-- product-->
+    <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../photo/product1_1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../photo/product1_2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../photo/product1_3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="col">
+            <h1 class="display-6">Soy Candle</h1>
+            <br>
+            <div class="row">
+                <div class="col text-center">
+                    <H1 class="display-6">Price</H1>
+                </div>  
+                <div class="col text-center">
+                    <H1 class="display-6">2.99 $</H1>
+                </div>
+                </div>
+                <br>
+                <br>
+            <div class="container justify-content-center ">
+                <div class="row">
+                    <div class="col-3"></div>
+                <div class="col-6">
+                    <ul class="list-group ">
+                    <li class="list-group-item">Size: width 3 inches and Height 4 inches </li>
+                    <li class="list-group-item">Color : White</li>
+                    <li class="list-group-item">Scent  :Fresh lavender and Hints of vanilla </li>
+                  </ul>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <br>
+            <br>
+             <div class="container justify-content-center ">
+                <div class="row">
+                    <div class="col-3">
+                        <h1 class="display-6">Quantity</h1>
+                    </div>
+                <div class="col-6"><form>
+                    <div class="mb-3">     
+                      <input type="number" class="form-control" id="quantity" name="quantity">
+                    </div>
+                     </div>
+                     <div class="col">
+                     <button type="submit" class="btn btn-primary" onclick="sum_product()" >Check out</button>
+                  </form>
+                </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-3"><h1 class="display-6"> Total price</h1></div>
+            <div class="col-9" >
+                <h1 id="output"></h1>
+            </div>
+        </div>
+           
+               
+            
+          </div>
+      
+ 
+        </div>
+      </div>
+
+
+
 
 
 
@@ -82,6 +169,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script> 
+        
+        function sum_product() {
+            var quantity = document.getElementById("quantity").value;
+            var output = Mathfloor(quantity *2.99);
+            document.getElementById('output').innerHTML = output;
+        }
+
+        </script>
 
 </body>
 
